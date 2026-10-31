@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kensington Maynes//Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:km21-20270502@kensingtonmaynes
+DTSTAMP:20261031T230000Z
+DTSTART;VALUE=DATE:20270502
+DTEND;VALUE=DATE:20270503
+SUMMARY:Kensington Maynes #21 · FC Westlake vs. Sting Dallas Black
+DESCRIPTION:FC Westlake Blue ECNL-RL vs. Sting Dallas Black. Kensington wears #21. Kit: TBA. Time and field to be announced.
+END:VEVENT
+END:VCALENDAR
