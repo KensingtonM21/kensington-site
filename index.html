@@ -55,6 +55,18 @@ h2 small{font-family:var(--body);text-transform:none;letter-spacing:0;font-size:
 .award-sub{margin:0 0 14px;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-size:18px}
 .award p:last-child{margin:0;max-width:52ch;opacity:.9}
 @media (max-width:720px){.award{grid-template-columns:1fr}}
+.badge{display:inline-block;background:var(--accent);color:#14203d;font-family:var(--display);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:15px;padding:5px 12px;margin-bottom:16px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18);margin:0 0 20px;max-width:640px}
+.facts div{background:var(--navy);padding:8px 12px;min-width:0}
+.facts dt{font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:var(--accent);padding:0;border:0;white-space:normal}
+.facts dd{margin:2px 0 0;font-weight:600;font-size:15px;line-height:1.25;padding:0;border:0}
+.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.jump .wrap{display:flex;gap:4px 22px;flex-wrap:wrap;padding-block:10px}
+.jump a{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:15px;text-decoration:none;color:var(--ink)}
+.jump a:hover{color:var(--navy);text-decoration:underline;text-decoration-color:var(--accent)}
+section[id],div[id="profile"]{scroll-margin-top:56px}
+.coach a{text-decoration:none}.coach a:hover{text-decoration:underline}
+@media (max-width:720px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .film{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
 .film a{background:var(--surface);border:1px solid var(--line);padding:18px 20px;text-decoration:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .film a:hover{border-color:var(--accent)}
@@ -130,40 +142,35 @@ footer .wrap{padding-block:20px}
   <div class="wrap">
     <div class="photo"><img src="img/headshot.jpg" alt="Kensington Maynes headshot"></div>
     <div>
-      <div class="eyebrow">Class of 2028 · Austin, TX</div>
+      <div class="eyebrow">Class of 2028 · Austin, Texas</div>
       <h1>Kensington<br>Maynes</h1>
-      <div class="tags">
-        <span class="tag" style="background:var(--accent);color:#14203d;border-color:var(--accent);font-weight:600">Grad Year 2028</span>
-        <span class="tag">ECNL RL All-Region 2025–26</span>
-        <span class="tag">#21</span>
-        <span class="tag">Utility player</span>
-        <span class="tag">Two-footed</span>
-        <span class="tag">FC Westlake 09G ECNL-RL</span>
-        <span class="tag">Westwood HS Varsity</span>
-        <span class="tag">USL W · Hill Country Linces</span>
-      </div>
+      <div class="badge">★ ECNL RL All-Regional League · Texas 2025–26</div>
+      <dl class="facts">
+        <div><dt>Grad year</dt><dd>2028</dd></div>
+        <div><dt>Position</dt><dd>Utility (D / F)</dd></div>
+        <div><dt>Height</dt><dd>5'5"</dd></div>
+        <div><dt>Foot</dt><dd>Both (L 52%)</dd></div>
+        <div><dt>GPA</dt><dd>4.26 W / 3.78 UW</dd></div>
+        <div><dt>Club</dt><dd>FC Westlake ECNL-RL #21</dd></div>
+        <div><dt>High school</dt><dd>Westwood HS (TX) Varsity</dd></div>
+        <div><dt>Major</dt><dd>Nursing / Health Sci.</dd></div>
+      </dl>
       <div class="cta">
         <a class="btn btn-gold" href="https://www.hudl.com/profile/26954767/Kensington-Maynes/highlights" target="_blank" rel="noopener">Watch highlights ▸</a>
-        <button class="btn btn-ghost" data-copy="kensingtonm21@gmail.com" id="copy-hero">Copy email: kensingtonm21@gmail.com</button>
+        <a class="btn btn-ghost" href="mailto:kensingtonm21@gmail.com?subject=Recruiting%20inquiry%20-%20Kensington%20Maynes%20(2028)">Email Kensington</a>
+        <a class="btn btn-ghost" href="Kensington_Maynes_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
       </div>
     </div>
   </div>
 </header>
+<nav class="jump" aria-label="Sections"><div class="wrap">
+  <a href="#film">Film</a><a href="#schedule">Schedule</a><a href="#profile">Profile</a><a href="#references">References</a><a href="#contact">Contact</a>
+</div></nav>
 
 <main>
   <div class="wrap">
 
-    <section class="award">
-      <img src="img/award.jpg" alt="FC Westlake graphic announcing Kensington Maynes, 2025-26 ECNL RL Girls All-Regional League, Texas">
-      <div class="award-txt">
-        <div class="eyebrow">Honor · 2025–26</div>
-        <h2 class="award-h">ECNL RL Girls All-Regional League</h2>
-        <p class="award-sub">Texas</p>
-        <p>Named to the All-Regional League team for the 2025–26 ECNL Regional League season with FC Westlake Blue G2009.</p>
-      </div>
-    </section>
-
-    <section>
+    <section id="film">
       <h2>Film <small>Hudl</small></h2>
       <div class="film">
         <a href="https://www.hudl.com/profile/26954767/Kensington-Maynes/highlights" target="_blank" rel="noopener">
@@ -178,7 +185,7 @@ footer .wrap{padding-block:20px}
       </div>
     </section>
 
-    <section>
+    <section id="schedule">
       <h2>Upcoming schedule <small>Club season</small></h2>
       <p class="note">FC Westlake Blue ECNL-RL · Kensington wears <b>#21</b>. Kickoff times are Central.</p>
       <div class="subbar"><a class="btn btn-sub" href="https://calendar.playmetrics.com/calendars/c774/t514559/p0/tEC5483D0/f/games-calendar.ics" target="_blank" rel="noopener">Add all games ▸</a><span class="sub">Or tap <b>+ Add</b> on any single game.</span></div>
@@ -197,7 +204,17 @@ footer .wrap{padding-block:20px}
       <div class="empty" id="none" hidden>No upcoming games listed right now. Check back soon.</div>
     </section>
 
-    <div class="sheet">
+    <section class="award">
+      <img src="img/award.jpg" alt="FC Westlake graphic announcing Kensington Maynes, 2025-26 ECNL RL Girls All-Regional League, Texas">
+      <div class="award-txt">
+        <div class="eyebrow">Honor · 2025–26</div>
+        <h2 class="award-h">ECNL RL Girls All-Regional League</h2>
+        <p class="award-sub">Texas</p>
+        <p>Named to the All-Regional League team for the 2025–26 ECNL Regional League season with FC Westlake Blue G2009.</p>
+      </div>
+    </section>
+
+    <div class="sheet" id="profile">
       <section>
         <h2>Player profile</h2>
         <dl>
@@ -270,22 +287,22 @@ footer .wrap{padding-block:20px}
       </div>
     </section>
 
-    <section>
+    <section id="references">
       <h2>Coach references</h2>
       <div class="coaches">
         <div class="coach"><span class="team">FC Westlake ECNL-RL</span><strong>Jessica DeAnda</strong>
-          <div class="email">jdeanda@westlakesoccer.com <button class="copy" data-copy="jdeanda@westlakesoccer.com" id="copy-c1">Copy</button></div></div>
+          <div class="email"><a href="mailto:jdeanda@westlakesoccer.com">jdeanda@westlakesoccer.com</a> <button class="copy" data-copy="jdeanda@westlakesoccer.com" id="copy-c1">Copy</button></div></div>
         <div class="coach"><span class="team">Westwood HS Varsity</span><strong>Malcolm Framjee</strong>
-          <div class="email">malcom_framjee@roundrockisd.org <button class="copy" data-copy="malcom_framjee@roundrockisd.org" id="copy-c2">Copy</button></div></div>
+          <div class="email"><a href="mailto:malcom_framjee@roundrockisd.org">malcom_framjee@roundrockisd.org</a> <button class="copy" data-copy="malcom_framjee@roundrockisd.org" id="copy-c2">Copy</button></div></div>
         <div class="coach"><span class="team">Hill Country Linces (USL W)</span><strong>Tanya Noujaim</strong>
-          <div class="email">tanyanoujaim@gmail.com <button class="copy" data-copy="tanyanoujaim@gmail.com" id="copy-c3">Copy</button></div></div>
+          <div class="email"><a href="mailto:tanyanoujaim@gmail.com">tanyanoujaim@gmail.com</a> <button class="copy" data-copy="tanyanoujaim@gmail.com" id="copy-c3">Copy</button></div></div>
       </div>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact Kensington</h2>
-      <div class="coach" style="max-width:420px"><strong>kensingtonm21@gmail.com</strong>
-        <div class="email"><button class="copy" data-copy="kensingtonm21@gmail.com" id="copy-k">Copy email</button></div></div>
+      <div class="coach" style="max-width:460px"><strong><a href="mailto:kensingtonm21@gmail.com?subject=Recruiting%20inquiry%20-%20Kensington%20Maynes%20(2028)">kensingtonm21@gmail.com</a></strong>
+        <div class="email"><button class="copy" data-copy="kensingtonm21@gmail.com" id="copy-k">Copy email</button><a class="lnk" href="Kensington_Maynes_Resume.pdf" target="_blank" rel="noopener" style="margin-top:0">Download resume (PDF) ▸</a></div></div>
     </section>
 
   </div>
